@@ -60,7 +60,7 @@
       right: 12px;
       padding: 12px 14px;
       color: white;
-      background: rgba(8, 18, 40, 0.84);
+      background: rgba(8, 18, 40, 0.82);
       border-radius: 12px;
       line-height: 1.35;
       font-size: 14px;
@@ -96,138 +96,163 @@
 
     <a-marker preset="hiro" smooth="true" smooth-count="5">
 
-      <!-- Keeps the visual upright -->
       <a-entity rotation="0 0 0">
 
-        <!-- Dark standing background -->
-        <a-plane
-          position="0 1.25 -0.14"
-          width="3.25"
-          height="3.25"
-          depth="0.08"
-          color="#050b1d"
-          opacity="0.94">
-        </a-plane>
-
-        <!-- Base for standing appearance -->
-        <a-box
-          position="0 -0.38 0"
-          width="1.35"
-          height="0.12"
-          depth="0.42"
-          color="#101f3d">
-        </a-box>
-
-        <!-- DNA and title -->
-        <a-entity
-          position="0 0.22 0"
-          scale="0.78 0.78 0.78">
-
+        <!-- DNA title -->
+        <a-entity position="0 0.22 0" scale="0.78 0.78 0.78">
           <a-entity
             dna-helix
             position="0 0.28 0">
           </a-entity>
 
+          <a-box
+            position="0 1.84 -0.04"
+            width="1.95"
+            height="0.48"
+            depth="0.05"
+            color="#ffffff"
+            opacity="0.88">
+          </a-box>
+
           <a-text
             value="GENETIC VARIANT"
-            position="0 1.92 0.02"
+            position="0 1.93 0.02"
             align="center"
-            color="#79e8ff"
-            width="2.35">
+            color="#111111"
+            width="2.15">
           </a-text>
 
           <a-text
             value="Missense change"
             position="0 1.76 0.02"
             align="center"
-            color="#e9f7ff"
-            width="1.7">
+            color="#111111"
+            width="1.55">
           </a-text>
         </a-entity>
 
-        <!-- Conservation features -->
+        <!-- Primate conservation -->
         <a-sphere
           position="-0.82 0.95 0"
           radius="0.09"
           color="#4e9cff">
         </a-sphere>
 
+        <a-box
+          position="-1.08 0.95 -0.04"
+          width="1.35"
+          height="0.34"
+          depth="0.05"
+          color="#ffffff"
+          opacity="0.88">
+        </a-box>
+
         <a-text
           value="PRIMATE\nphyloP / phastCons"
-          position="-1.35 0.95 0"
-          align="right"
-          color="#d9f4ff"
-          width="1.35">
+          position="-1.08 0.95 0.02"
+          align="center"
+          color="#111111"
+          width="1.2">
         </a-text>
 
+        <!-- Mammalian conservation -->
         <a-sphere
           position="0.82 0.95 0"
           radius="0.09"
           color="#32d296">
         </a-sphere>
 
+        <a-box
+          position="1.08 0.95 -0.04"
+          width="1.35"
+          height="0.34"
+          depth="0.05"
+          color="#ffffff"
+          opacity="0.88">
+        </a-box>
+
         <a-text
           value="MAMMALIAN\nconservation"
-          position="1.35 0.95 0"
-          align="left"
-          color="#d9f4ff"
-          width="1.35">
+          position="1.08 0.95 0.02"
+          align="center"
+          color="#111111"
+          width="1.2">
         </a-text>
 
+        <!-- Vertebrate conservation -->
         <a-sphere
           position="0 0.08 0"
           radius="0.09"
           color="#c084fc">
         </a-sphere>
 
+        <a-box
+          position="0 -0.16 -0.04"
+          width="2.05"
+          height="0.28"
+          depth="0.05"
+          color="#ffffff"
+          opacity="0.88">
+        </a-box>
+
         <a-text
           value="VERTEBRATE CONSERVATION"
-          position="0 -0.16 0"
+          position="0 -0.16 0.02"
           align="center"
-          color="#d9f4ff"
-          width="1.8">
+          color="#111111"
+          width="1.75">
         </a-text>
 
         <!-- Model output -->
-        <a-plane
-          position="0 2.45 0"
-          width="2.25"
+        <a-box
+          position="0 2.45 -0.04"
+          width="2.35"
           height="0.78"
           depth="0.06"
-          color="#081d3b"
-          opacity="0.96">
-        </a-plane>
+          color="#ffffff"
+          opacity="0.92">
+        </a-box>
 
         <a-text
           value="MODEL OUTPUT"
           position="0 2.69 0.02"
           align="center"
-          color="#7de3ff"
-          width="2.2">
+          color="#111111"
+          width="2.05">
         </a-text>
 
         <a-text
           value="Multi-Kernel SVM"
           position="0 2.50 0.02"
           align="center"
-          color="#ffffff"
-          width="1.95">
+          color="#111111"
+          width="1.85">
         </a-text>
 
         <a-text
           value="Illustrative class: PATHOGENIC"
           position="0 2.31 0.02"
           align="center"
-          color="#ff9fba"
-          width="1.95">
+          color="#111111"
+          width="1.8">
         </a-text>
+
+        <!-- Disclaimer -->
+        <a-box
+          position="0 -0.43 -0.04"
+          width="2.35"
+          height="0.25"
+          depth="0.05"
+          color="#ffffff"
+          opacity="0.88">
+        </a-box>
 
         <a-text
           value="Research visualization - not a diagnosis"
-          position="0 -0.43 0"
+          position="0 -0.43 0.02"
           align="center"
-          color="#ffe082"
-          width="2.05">
+          color="#111111"
+          width="1.9">
         </a-text>
 
       </a-entity>
