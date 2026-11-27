@@ -25,3 +25,6 @@ https://ar-js-org.github.io/AR.js-Docs/marker-based/
 - Primate, mammalian, and vertebrate labels: conservation feature groups.
 - Multi-Kernel SVM: the project model that combines information from separate kernels.
 - Pathogenic output: an illustrative model result, not a clinical prediction.
+
+# page link
+https://sanjana-glitch-art.github.io/ar-missense-variant-demo/
