@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>AR Missense Variant Demo</title>
 
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
@@ -85,7 +84,7 @@
   <div id="intro">
     <button id="close">×</button>
     <strong>Missense Variant AR Demo</strong><br>
-    Point your camera at the Hiro marker to view the visualization.
+    Point your camera at the Hiro marker. The DNA visualization represents a genetic variant.
   </div>
 
   <a-scene
@@ -97,111 +96,139 @@
 
     <a-marker preset="hiro" smooth="true" smooth-count="5">
 
-      <a-entity position="0 0.22 0" scale="0.78 0.78 0.78">
+      <!-- Keeps the visual upright -->
+      <a-entity rotation="0 0 -90">
+
+        <!-- Dark standing background -->
+        <a-plane
+          position="0 1.25 -0.14"
+          width="3.25"
+          height="3.25"
+          color="#050b1d"
+          opacity="0.94">
+        </a-plane>
+
+        <!-- Base for standing appearance -->
+        <a-box
+          position="0 -0.38 0"
+          width="1.35"
+          height="0.12"
+          depth="0.42"
+          color="#101f3d">
+        </a-box>
+
+        <!-- DNA and title -->
         <a-entity
-          dna-helix
-          position="0 0.28 0">
+          position="0 0.22 0"
+          scale="0.78 0.78 0.78">
+
+          <a-entity
+            dna-helix
+            position="0 0.28 0">
+          </a-entity>
+
+          <a-text
+            value="GENETIC VARIANT"
+            position="0 1.92 0.02"
+            align="center"
+            color="#79e8ff"
+            width="2.35">
+          </a-text>
+
+          <a-text
+            value="Missense change"
+            position="0 1.76 0.02"
+            align="center"
+            color="#e9f7ff"
+            width="1.7">
+          </a-text>
         </a-entity>
 
+        <!-- Conservation features -->
+        <a-sphere
+          position="-0.82 0.95 0"
+          radius="0.09"
+          color="#4e9cff">
+        </a-sphere>
+
         <a-text
-          value="GENETIC VARIANT"
-          position="0 1.92 0.02"
+          value="PRIMATE\nphyloP / phastCons"
+          position="-1.35 0.95 0"
+          align="right"
+          color="#d9f4ff"
+          width="1.35">
+        </a-text>
+
+        <a-sphere
+          position="0.82 0.95 0"
+          radius="0.09"
+          color="#32d296">
+        </a-sphere>
+
+        <a-text
+          value="MAMMALIAN\nconservation"
+          position="1.35 0.95 0"
+          align="left"
+          color="#d9f4ff"
+          width="1.35">
+        </a-text>
+
+        <a-sphere
+          position="0 0.08 0"
+          radius="0.09"
+          color="#c084fc">
+        </a-sphere>
+
+        <a-text
+          value="VERTEBRATE CONSERVATION"
+          position="0 -0.16 0"
           align="center"
-          color="#79e8ff"
-          width="2.35">
+          color="#d9f4ff"
+          width="1.8">
+        </a-text>
+
+        <!-- Model output -->
+        <a-plane
+          position="0 2.45 0"
+          width="2.25"
+          height="0.78"
+          color="#081d3b"
+          opacity="0.96">
+        </a-plane>
+
+        <a-text
+          value="MODEL OUTPUT"
+          position="0 2.69 0.02"
+          align="center"
+          color="#7de3ff"
+          width="2.2">
         </a-text>
 
         <a-text
-          value="Missense change"
-          position="0 1.76 0.02"
+          value="Multi-Kernel SVM"
+          position="0 2.50 0.02"
           align="center"
-          color="#e9f7ff"
-          width="1.7">
+          color="#ffffff"
+          width="1.95">
         </a-text>
+
+        <a-text
+          value="Illustrative class: PATHOGENIC"
+          position="0 2.31 0.02"
+          align="center"
+          color="#ff9fba"
+          width="1.95">
+        </a-text>
+
+        <a-text
+          value="Research visualization - not a diagnosis"
+          position="0 -0.43 0"
+          align="center"
+          color="#ffe082"
+          width="2.05">
+        </a-text>
+
       </a-entity>
-
-      <a-sphere
-        position="-0.82 0.95 0"
-        radius="0.09"
-        color="#4e9cff">
-      </a-sphere>
-
-      <a-text
-        value="PRIMATE\nphyloP / phastCons"
-        position="-1.35 0.95 0"
-        align="right"
-        color="#d9f4ff"
-        width="1.35">
-      </a-text>
-
-      <a-sphere
-        position="0.82 0.95 0"
-        radius="0.09"
-        color="#32d296">
-      </a-sphere>
-
-      <a-text
-        value="MAMMALIAN\nconservation"
-        position="1.35 0.95 0"
-        align="left"
-        color="#d9f4ff"
-        width="1.35">
-      </a-text>
-
-      <a-sphere
-        position="0 0.08 0"
-        radius="0.09"
-        color="#c084fc">
-      </a-sphere>
-
-      <a-text
-        value="VERTEBRATE CONSERVATION"
-        position="0 -0.16 0"
-        align="center"
-        color="#d9f4ff"
-        width="1.8">
-      </a-text>
-
-      <a-plane
-        position="0 2.45 0"
-        width="2.25"
-        height="0.78"
-        color="#081d3b"
-        opacity="0.96">
-      </a-plane>
-
-      <a-text
-        value="MODEL OUTPUT"
-        position="0 2.69 0.02"
-        align="center"
-        color="#7de3ff"
-        width="2.2">
-      </a-text>
-
-      <a-text
-        value="Multi-Kernel SVM"
-        position="0 2.50 0.02"
-        align="center"
-        color="#ffffff"
-        width="1.95">
-      </a-text>
-
-      <a-text
-        value="Illustrative class: PATHOGENIC"
-        position="0 2.31 0.02"
-        align="center"
-        color="#ff9fba"
-        width="1.95">
-      </a-text>
-
-      <a-text
-        value="Research visualization - not a diagnosis"
-        position="0 -0.43 0"
-        align="center"
-        color="#ffe082"
-        width="2.05">
-      </a-text>
-
     </a-marker>
 
     <a-entity camera></a-entity>
